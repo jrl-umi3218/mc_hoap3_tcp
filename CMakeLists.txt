@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_C_STANDARD 99)
 
 find_package(mc_rtc REQUIRED)
+# system is used for Boost::asio
+find_package(Boost REQUIRED COMPONENTS program_options system)
 
 add_subdirectory(src)
 

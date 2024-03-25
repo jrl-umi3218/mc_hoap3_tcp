@@ -6,6 +6,7 @@
 #include <netinet/tcp.h>
 #include <netdb.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 int main(int argc, char * argv[]) {
 
@@ -90,17 +91,14 @@ i=0;
 
     for (j=0;j<21;j++) message_RT.donnee[j]=(short)message.donnee[j];
     for (j=0;j<21;j++) message.donnee[j]=(double)message_RT.donnee[j];
-   //   printf("i=%d \n",i);
-
-     //   for (j=0;j<21;j++) printf("%1.1lf | ",message.donnee[j]);
-
-     // printf("\n ");
+     printf("i=%d \n",i);
+     for (j=0;j<21;j++) printf("%1.1lf | ",message.donnee[j]);
+     printf("\n ");
 
          result=write(client,&message,sizeof(message));
 
+         usleep(1000);
          i++;
-
-
 } while (i<FINBOUCLE);
         // nsend=write(serveur,&message,sizeof(message));
 

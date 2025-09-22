@@ -87,7 +87,8 @@ int main(int argc, char * argv[])
 
   i = 0;
 
-  do {
+  do
+  {
 
     result = read(client, &message, sizeof(message));
 

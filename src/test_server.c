@@ -12,19 +12,13 @@ int main(int argc, char * argv[])
 {
 
   struct mesg
-  {
-    double donnee[21];
-  };
+  { double donnee[21]; };
 
   struct mesg_init
-  {
-    double donnee[2];
-  };
+  { double donnee[2]; };
 
   struct mesg_RT
-  {
-    short donnee[21];
-  };
+  { short donnee[21]; };
 
   struct mesg message;
   struct mesg_init message_init;
